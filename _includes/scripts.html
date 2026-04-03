@@ -8,7 +8,7 @@
   function setDarkMode(enabled) {
     var sheet = document.getElementById('dark-mode-css');
     var btn   = document.getElementById('dark-mode-toggle');
-    if (sheet) { sheet.disabled = !enabled; }
+    if (sheet) { sheet.media = enabled ? 'all' : 'none'; }
     if (btn)   { btn.textContent = enabled ? '\u2600\uFE0F Light' : '\uD83C\uDF19 Dark'; }
     localStorage.setItem('darkMode', enabled ? 'enabled' : 'disabled');
   }
