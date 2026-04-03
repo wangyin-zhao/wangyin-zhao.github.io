@@ -14,16 +14,17 @@
   })();
 
   document.addEventListener('DOMContentLoaded', function () {
-    // Find the nav link whose href ends with #dark-mode-toggle
-    var toggleLink = document.querySelector('a[href="#dark-mode-toggle"]');
+    // Find the nav link whose href contains #dark-mode-toggle
+    // (Jekyll prepends base path so href becomes e.g. "/#dark-mode-toggle")
+    var toggleLink = document.querySelector('a[href*="#dark-mode-toggle"]');
     if (!toggleLink) return;
 
     // Update the link text to reflect the current mode
     function updateIcon() {
       if (document.body.classList.contains('dark-mode')) {
-        toggleLink.textContent = '☀️';  // Sun = currently dark, click to go light
+        toggleLink.textContent = 'Light';  // Currently dark — click to go light
       } else {
-        toggleLink.textContent = '🌙';  // Moon = currently light, click to go dark
+        toggleLink.textContent = 'Dark';   // Currently light — click to go dark
       }
     }
 
