@@ -319,97 +319,83 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
    Dark Mode
    ========================================================================== */
 
-/* When dark-mode class is added to <body>, override all key colours */
+/* When dark-mode class is added to <body>, override all key colours.
+   !important is used to beat existing theme specificity. */
 body.dark-mode {
-  /* Page background and text */
-  background-color: #1a1a2e;
-  color: #e0e0e0;
+  background-color: #1a1a2e !important;
+  color: #e0e0e0 !important;
+}
 
-  /* Masthead / top navigation bar */
-  .masthead {
-    background-color: #16213e;
-    border-bottom: 1px solid #0f3460;
+/* Masthead / top nav bar */
+body.dark-mode .masthead {
+  background-color: #16213e !important;
+  border-bottom: 1px solid #0f3460 !important;
+}
+body.dark-mode .masthead a,
+body.dark-mode .masthead__menu-item a {
+  color: #e0e0e0 !important;
+}
+body.dark-mode .masthead a:hover {
+  color: #ffffff !important;
+}
 
-    /* Nav links */
-    a {
-      color: #e0e0e0;
-      &:hover {
-        color: #ffffff;
-      }
-    }
-  }
+/* Sidebar */
+body.dark-mode .sidebar,
+body.dark-mode .author__urls-wrapper {
+  background-color: #16213e !important;
+  color: #e0e0e0 !important;
+}
+body.dark-mode .sidebar a {
+  color: #a0c4ff !important;
+}
 
-  /* Sidebar (author profile) */
-  .sidebar {
-    background-color: #16213e;
-    color: #e0e0e0;
+/* Main content and archive pages */
+body.dark-mode .page__content,
+body.dark-mode .archive,
+body.dark-mode .initial-content,
+body.dark-mode .page,
+body.dark-mode #main {
+  background-color: #1a1a2e !important;
+  color: #e0e0e0 !important;
+}
+body.dark-mode .page__content a,
+body.dark-mode .archive a {
+  color: #a0c4ff !important;
+}
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #ffffff !important;
+}
 
-    a {
-      color: #a0c4ff;
-      &:hover { color: #ffffff; }
-    }
-  }
+/* Footer */
+body.dark-mode .page__footer {
+  background-color: #0f3460 !important;
+  color: #aaaaaa !important;
+}
+body.dark-mode .page__footer a {
+  color: #a0c4ff !important;
+}
 
-  /* Main page content area */
-  .page__content,
-  .archive,
-  .initial-content {
-    background-color: #1a1a2e;
-    color: #e0e0e0;
+/* Code blocks */
+body.dark-mode p > code,
+body.dark-mode a > code,
+body.dark-mode li > code {
+  background: #2a2a4a !important;
+  border-color: #444 !important;
+  color: #f8f8f2 !important;
+}
 
-    /* Links within content */
-    a {
-      color: #a0c4ff;
-      &:hover { color: #ffffff; }
-    }
+/* Tables */
+body.dark-mode table { color: #e0e0e0 !important; }
+body.dark-mode th    { background-color: #16213e !important; color: #ffffff !important; }
+body.dark-mode tr:nth-child(even) { background-color: #16213e !important; }
 
-    /* Headings */
-    h1, h2, h3, h4, h5, h6 {
-      color: #ffffff;
-    }
-  }
-
-  /* Footer */
-  .page__footer {
-    background-color: #0f3460;
-    color: #aaaaaa;
-
-    a {
-      color: #a0c4ff;
-    }
-  }
-
-  /* Inline code blocks */
-  p > code,
-  a > code,
-  li > code {
-    background: #2a2a4a;
-    border-color: #444;
-    color: #f8f8f2;
-  }
-
-  /* Horizontal rules and borders */
-  hr {
-    border-top-color: #444;
-  }
-
-  /* Tables */
-  table {
-    color: #e0e0e0;
-
-    th {
-      background-color: #16213e;
-      color: #ffffff;
-    }
-
-    tr:nth-child(even) {
-      background-color: #16213e;
-    }
-  }
-
-  /* Blockquotes */
-  blockquote {
-    border-left-color: #a0c4ff;
-    color: #aaaaaa;
-  }
+/* Blockquotes */
+body.dark-mode blockquote {
+  border-left-color: #a0c4ff !important;
+  color: #aaaaaa !important;
 }
