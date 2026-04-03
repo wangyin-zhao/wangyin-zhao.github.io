@@ -313,3 +313,103 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
   -webkit-transition: $global-transition;
   transition: $global-transition;
 }
+
+
+/*
+   Dark Mode
+   ========================================================================== */
+
+/* When dark-mode class is added to <body>, override all key colours */
+body.dark-mode {
+  /* Page background and text */
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+
+  /* Masthead / top navigation bar */
+  .masthead {
+    background-color: #16213e;
+    border-bottom: 1px solid #0f3460;
+
+    /* Nav links */
+    a {
+      color: #e0e0e0;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+
+  /* Sidebar (author profile) */
+  .sidebar {
+    background-color: #16213e;
+    color: #e0e0e0;
+
+    a {
+      color: #a0c4ff;
+      &:hover { color: #ffffff; }
+    }
+  }
+
+  /* Main page content area */
+  .page__content,
+  .archive,
+  .initial-content {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+
+    /* Links within content */
+    a {
+      color: #a0c4ff;
+      &:hover { color: #ffffff; }
+    }
+
+    /* Headings */
+    h1, h2, h3, h4, h5, h6 {
+      color: #ffffff;
+    }
+  }
+
+  /* Footer */
+  .page__footer {
+    background-color: #0f3460;
+    color: #aaaaaa;
+
+    a {
+      color: #a0c4ff;
+    }
+  }
+
+  /* Inline code blocks */
+  p > code,
+  a > code,
+  li > code {
+    background: #2a2a4a;
+    border-color: #444;
+    color: #f8f8f2;
+  }
+
+  /* Horizontal rules and borders */
+  hr {
+    border-top-color: #444;
+  }
+
+  /* Tables */
+  table {
+    color: #e0e0e0;
+
+    th {
+      background-color: #16213e;
+      color: #ffffff;
+    }
+
+    tr:nth-child(even) {
+      background-color: #16213e;
+    }
+  }
+
+  /* Blockquotes */
+  blockquote {
+    border-left-color: #a0c4ff;
+    color: #aaaaaa;
+  }
+}

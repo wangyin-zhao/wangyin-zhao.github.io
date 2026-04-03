@@ -2,3 +2,47 @@
 
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}
+
+<script>
+  // ── Dark Mode Toggle ──────────────────────────────────────────────────────
+  // On page load, check if the user previously chose dark mode and apply it
+  (function () {
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.body.classList.add('dark-mode');
+    }
+  })();
+
+  // Wait for the DOM to be ready before attaching the button event
+  document.addEventListener('DOMContentLoaded', function () {
+    var toggle = document.getElementById('dark-mode-toggle');
+
+    // Set the correct icon based on current mode
+    function updateIcon() {
+      if (document.body.classList.contains('dark-mode')) {
+        toggle.textContent = '☀️';   // Show sun icon when in dark mode
+        toggle.title = 'Switch to light mode';
+      } else {
+        toggle.textContent = '🌙';   // Show moon icon when in light mode
+        toggle.title = 'Switch to dark mode';
+      }
+    }
+
+    // Apply icon on first load
+    updateIcon();
+
+    // Toggle dark mode on button click
+    toggle.addEventListener('click', function () {
+      document.body.classList.toggle('dark-mode');
+
+      // Save the user's preference so it persists across pages and sessions
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        localStorage.setItem('darkMode', 'disabled');
+      }
+
+      // Update the button icon to reflect the new mode
+      updateIcon();
+    });
+  });
+</script>
