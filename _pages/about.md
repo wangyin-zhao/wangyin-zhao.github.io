@@ -14,4 +14,6 @@ My research sits at the intersection of political violence, natural disasters, a
 
 I received a [MSc in International Relations(Research)](https://www.lse.ac.uk/international-relations) at LSE and a [BA in International Studies](https://www.nottingham.edu.cn/en/humanities-and-social-sciences/schools-and-department/international-studies/home.aspx) at University of Nottingham, Ningbo campus.  
 
+Here is my [CV](/files/CV_Wangyin_Zhao.pdf).
+
 Beyond the academia, I love hiking, cycling, and nature. 
