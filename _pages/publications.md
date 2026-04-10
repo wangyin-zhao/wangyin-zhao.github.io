@@ -16,7 +16,7 @@ author_profile: true
 
 ## Working Papers
 
-- **“Buffering the Disaster: How Extractive Companies Dampen Post-Disaster Conflict”**  
+- **”Buying Stability After Sudden and Negative Shocks: How Extractive Companies Dampen Post-Disaster Conflict”**  
   Submitted | *(Draft available upon request)*
 
 - **“Anticipated Power Shifts, Commitment, and Civil War Violence”** (with Mahmoud Osman)  
