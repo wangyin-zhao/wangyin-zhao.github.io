@@ -2,6 +2,10 @@
 permalink: /chinese/
 title: "中文简介"
 excerpt: "中文简介"
+
+# Not live yet. Flip to true (and re-add the 中文 nav item in
+# _data/navigation.yml) to publish this page.
+published: false
 author_profile: true
 redirect_from:
   - /cn/
